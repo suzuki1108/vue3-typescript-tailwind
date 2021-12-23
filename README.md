@@ -20,23 +20,13 @@ $ cd vue3-typescript-tailwind
 $ vue add tailwind
 ```
 
-tailwindをプロジェクトのCSSに追加
-
-`./src/index.css`を追加して、ここにtaildwindのスタイルを追加する。
-
-```jsx
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-このファイル内容を`./src/main.ts`に代入する。
+assetsに生成されたtailwind.cssを`./src/main.ts`に代入する。
 
 ```jsx
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import './index.css'
+import './assets/tailwind.css'
 
 createApp(App).use(router).mount("#app");
 ```
